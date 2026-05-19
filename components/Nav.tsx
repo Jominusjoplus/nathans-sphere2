@@ -1,11 +1,24 @@
 'use client';
+import { useEffect, useState } from 'react';
 
 export default function Nav() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
     <nav style={{
       position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
-      padding: '28px 48px',
+      padding: scrolled ? '18px 48px' : '28px 48px',
       display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+      transition: 'all 0.5s ease',
+      background: scrolled ? 'rgba(250,250,248,0.92)' : 'transparent',
+      backdropFilter: scrolled ? 'blur(12px)' : 'none',
+      borderBottom: scrolled ? '0.5px solid var(--stone)' : '0.5px solid transparent',
     }}>
       {/* Left links */}
       <div style={{ display: 'flex', gap: 40 }}>

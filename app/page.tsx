@@ -12,6 +12,7 @@ export default function Home() {
           <p style={{ fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--accent)', marginTop: 8 }}>
             Fashion House · Est. Now
           </p>
+          <div style={{ minHeight: '200vh' }} />
         </div>
       </div>
     </main>
