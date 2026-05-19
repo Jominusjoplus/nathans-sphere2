@@ -1,6 +1,7 @@
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import Manifesto from '@/components/Manifesto';
+import SubBrands from '@/components/SubBrands';
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Manifesto />
+      <SubBrands />
     </main>
   );
 }
