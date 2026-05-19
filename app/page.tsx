@@ -1,20 +1,11 @@
 import Nav from '@/components/Nav';
+import Hero from '@/components/Hero';
 
 export default function Home() {
   return (
-    <main style={{ background: 'var(--white)', minHeight: '100vh' }}>
+    <main style={{ background: 'var(--white)' }}>
       <Nav />
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-        <div style={{ textAlign: 'center' }}>
-          <p style={{ fontFamily: 'Cormorant, serif', fontSize: 72, fontWeight: 300, color: 'var(--dark)', letterSpacing: '0.04em' }}>
-            Nathan&apos;s Sphere
-          </p>
-          <p style={{ fontSize: 11, letterSpacing: '0.28em', textTransform: 'uppercase', color: 'var(--accent)', marginTop: 8 }}>
-            Fashion House · Est. Now
-          </p>
-          <div style={{ minHeight: '200vh' }} />
-        </div>
-      </div>
+      <Hero />
     </main>
   );
 }
