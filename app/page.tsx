@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Manifesto from '@/components/Manifesto';
 import SubBrands from '@/components/SubBrands';
 import Collections from '@/components/Collections';
+import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Manifesto />
       <SubBrands />
       <Collections />
+      <Contact />
     </main>
   );
 }
