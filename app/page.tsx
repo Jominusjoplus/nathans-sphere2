@@ -2,6 +2,7 @@ import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
 import Manifesto from '@/components/Manifesto';
 import SubBrands from '@/components/SubBrands';
+import Collections from '@/components/Collections';
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Hero />
       <Manifesto />
       <SubBrands />
+      <Collections />
     </main>
   );
 }
