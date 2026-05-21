@@ -30,7 +30,7 @@ export default function Footer() {
             <p style={{ fontSize: 9, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: 24 }}>
               The Universe
             </p>
-            {['Sub-Brand One', 'Sub-Brand Two', 'Sub-Brand Three', 'Sub-Brand Four'].map(b => (
+            {['Featured Brand One', 'Featured Brand Two', 'Featured Brand Three', 'Featured Brand Four'].map(b => (
               <a key={b} href="#subbrands" style={{
                 display: 'block', fontSize: 13,
                 color: 'rgba(255,255,255,0.3)', textDecoration: 'none',

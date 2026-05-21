@@ -1,4 +1,6 @@
 'use client';
+import Image from 'next/image';
+import nathansSphere from '@/public/src/image/nathans_sphere.jpeg';
 
 export default function Hero() {
   return (
@@ -32,13 +34,12 @@ export default function Hero() {
         position: 'absolute',
         top: 80, right: 48, bottom: 160,
         width: '38%',
+        height: '60%',
         background: 'var(--stone)',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
       }}>
-        {/* Replace with your image later:
-            import Image from 'next/image';
-            <Image src="/images/hero.jpg" fill style={{ objectFit: 'cover' }} alt="Nathan's Sphere" priority />
-        */}
+            <Image src={nathansSphere} fill style={{ objectFit: 'cover' }} alt="Nathan's Sphere" priority />
+       
         <p style={{ fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--warm-gray)' }}>
           Hero Image
         </p>
@@ -53,7 +54,8 @@ export default function Hero() {
           Lagos · London · The World
         </p>
 
-        <h1 className="fade-up delay-2" style={{
+        <h1 className="fade-up delay-2" style=
+        {{
           fontFamily: 'Cormorant, serif',
           fontSize: 'clamp(48px, 6.5vw, 86px)',
           fontWeight: 300, lineHeight: 1.08,

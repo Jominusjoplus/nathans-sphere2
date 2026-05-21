@@ -22,7 +22,7 @@ export default function Nav() {
     }}>
       {/* Left links */}
       <div style={{ display: 'flex', gap: 40 }}>
-        {['Collections', 'Sub-Brands'].map(link => (
+        {['Collections', 'Featured Brands'].map(link => (
           <a key={link} href={`#${link.toLowerCase().replace('-','')}`} style={{
             fontSize: 11, letterSpacing: '0.18em', textTransform: 'uppercase',
             color: 'var(--warm-gray)', textDecoration: 'none', fontWeight: 400,

@@ -2,25 +2,25 @@
 const BRANDS = [
   {
     id: '01',
-    name: 'Sub-Brand One',
+    name: 'Featured Brand One',
     category: 'Apparel',
     desc: 'Your flagship clothing line. Seasonal collections for men and women who dress with intention.',
   },
   {
     id: '02',
-    name: 'Sub-Brand Two',
+    name: 'Featured Brand Two',
     category: 'Accessories',
     desc: 'Fine leather goods, jewellery, and statement pieces. Objects that outlast trends.',
   },
   {
     id: '03',
-    name: 'Sub-Brand Three',
+    name: 'Featured Brand Three',
     category: 'Lifestyle',
     desc: 'The Sphere extends beyond clothing — into the spaces you inhabit and the objects you choose.',
   },
   {
     id: '04',
-    name: 'Sub-Brand Four',
+    name: 'Featured Brand Four',
     category: 'Coming Soon',
     desc: "A new chapter in the Nathan's Sphere universe. Currently in development — watch this space.",
   },
@@ -42,7 +42,7 @@ export default function SubBrands() {
               The Universe
             </p>
             <h2 style={{ fontFamily: 'Cormorant, serif', fontSize: 'clamp(36px, 5vw, 60px)', fontWeight: 300, color: 'var(--dark)', lineHeight: 1.1 }}>
-              Our Sub-Brands
+              Our Featured Brands
             </h2>
           </div>
           <p style={{ fontSize: 13, color: 'var(--warm-gray)', maxWidth: 200, textAlign: 'right', lineHeight: 1.8, fontWeight: 300 }}>
