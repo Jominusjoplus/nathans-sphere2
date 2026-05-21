@@ -1,14 +1,7 @@
 export default function Manifesto() {
   return (
-    <section style={{
-      padding: '120px 48px',
-      background: 'var(--white)',
-      borderTop: '0.5px solid var(--stone)',
-    }}>
-      <div style={{
-        maxWidth: 1200, margin: '0 auto',
-        display: 'grid', gridTemplateColumns: '1fr 2fr', gap: 80, alignItems: 'start',
-      }}>
+    <section className="section-wrapper bg-white border-top">
+      <div className="section-container manifesto-grid">
 
         {/* Left — label */}
         <div>

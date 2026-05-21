@@ -13,18 +13,15 @@ export default function Nav() {
 
   return (
     <>
-      <nav style={{
-        position: 'fixed', top: 0, left: 0, right: 0, zIndex: 100,
+      <nav className="site-nav" style={{
         padding: scrolled ? '18px 24px' : '28px 24px',
-        display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-        transition: 'all 0.5s ease',
         background: scrolled || menuOpen ? 'rgba(250,250,248,0.96)' : 'transparent',
         backdropFilter: scrolled || menuOpen ? 'blur(12px)' : 'none',
         borderBottom: scrolled || menuOpen ? '0.5px solid var(--stone)' : '0.5px solid transparent',
       }}>
 
         {/* Logo — always center on mobile, left on desktop */}
-        <div style={{ textAlign: 'center', flex: 1 }}>
+        <div className="nav-logo">
           <div style={{ fontFamily: 'Cormorant, serif', fontSize: 20, fontWeight: 400, color: 'var(--dark)', letterSpacing: '0.06em', lineHeight: 1 }}>
             Nathan&apos;s Sphere
           </div>

@@ -15,6 +15,7 @@
   --dark: #1C1A18;
   --black: #0E0D0B;
   --accent: #BFA882;
+  --cream: #F4EADD;
 }
 
 html { scroll-behavior: smooth; }
@@ -28,6 +29,357 @@ body {
 }
 
 .serif { font-family: 'Cormorant', serif; }
+
+.section-wrapper {
+  padding: clamp(56px, 6vw, 120px) min(24px, 5vw);
+}
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+  padding: 28px clamp(16px, 4vw, 48px);
+}
+
+.bg-white {
+  background: var(--white);
+}
+
+.bg-off-white {
+  background: var(--off-white);
+}
+
+.border-top {
+  border-top: 0.5px solid var(--stone);
+}
+
+.nav-logo {
+  text-align: center;
+  flex: 1;
+}
+
+@media (max-width: 900px) {
+  .site-nav {
+    padding: 18px clamp(14px, 4vw, 24px);
+  }
+}
+
+.section-container {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 72px;
+}
+
+.section-header-right {
+  max-width: 280px;
+  text-align: right;
+  line-height: 1.8;
+}
+
+.section-header-left h2,
+.section-header-left h3,
+.section-header-left p {
+  margin: 0;
+}
+
+.hero-section {
+  min-height: 100vh;
+  background: var(--off-white);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 clamp(24px, 4vw, 48px) 80px;
+}
+
+.hero-image-slot {
+  position: absolute;
+  top: 80px;
+  right: 48px;
+  bottom: 160px;
+  width: 38%;
+  height: 60%;
+  background: var(--stone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-headline {
+  color: var(--dark);
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 2;
+  max-width: 520px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  right: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.manifesto-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.manifesto-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.collections-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5px;
+  background: var(--stone);
+}
+
+.collection-item {
+  background: var(--white);
+  display: grid;
+  grid-template-columns: 260px 1fr 32px;
+  gap: 48px;
+  align-items: center;
+  padding: 40px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.collection-image {
+  width: 260px;
+  height: 170px;
+  background: var(--stone);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.collection-arrow {
+  font-size: 20px;
+  color: var(--stone);
+}
+
+.subbrands-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--stone);
+}
+
+.subbrand-card {
+  background: var(--off-white);
+  padding: 48px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.subbrand-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background: var(--stone);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.contact-input,
+.contact-select,
+.contact-textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 0.5px solid var(--stone);
+  padding: 14px 0;
+  font-size: 14px;
+  color: var(--dark);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  outline: none;
+}
+
+.contact-textarea {
+  border-bottom: none;
+  border: 0.5px solid var(--stone);
+  padding: 16px;
+  resize: none;
+}
+
+.contact-submit {
+  background: var(--dark);
+  color: var(--white);
+  border: none;
+  padding: 18px 48px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  cursor: pointer;
+  align-self: flex-start;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.3s ease;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+  margin-bottom: 64px;
+}
+
+.footer-bottom {
+  border-top: 0.5px solid rgba(255,255,255,0.06);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-social {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.footer-link,
+.footer-social a {
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-social a:hover {
+  color: var(--white);
+}
+
+@media (max-width: 960px) {
+  .hero-image-slot {
+    position: static;
+    width: 100%;
+    height: 340px;
+    margin: 0 auto 32px;
+  }
+
+  .hero-section {
+    padding-bottom: 64px;
+  }
+
+  .hero-headline {
+    color: var(--cream);
+  }
+}
+
+@media (max-width: 900px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .section-header-right {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .manifesto-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collections-list {
+    margin: 0;
+  }
+
+  .collection-item {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding: 32px 0;
+  }
+
+  .collection-image {
+    width: 100%;
+    height: 220px;
+  }
+
+  .subbrands-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-submit {
+    width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-actions {
+    gap: 16px;
+  }
+
+  .hero-scroll-indicator {
+    display: none;
+  }
+
+  .subbrand-card,
+  .collection-item {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 520px) {
+  .section-wrapper {
+    padding: clamp(32px, 8vw, 56px) min(18px, 5vw);
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(28px); }

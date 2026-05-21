@@ -4,16 +4,7 @@ import nathansSphere from '@/public/src/image/nathans_sphere.jpeg';
 
 export default function Hero() {
   return (
-    <section style={{
-      minHeight: '100vh',
-      background: 'var(--off-white)',
-      position: 'relative',
-      overflow: 'hidden',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'flex-end',
-      padding: '0 48px 80px',
-    }}>
+    <section className="hero-section">
 
       {/* Background NS watermark */}
       <div style={{
@@ -30,14 +21,7 @@ export default function Hero() {
       </div>
 
       {/* Image slot — top right */}
-      <div style={{
-        position: 'absolute',
-        top: 80, right: 48, bottom: 160,
-        width: '38%',
-        height: '60%',
-        background: 'var(--stone)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-      }}>
+      <div className="hero-image-slot">
             <Image src={nathansSphere} fill style={{ objectFit: 'cover' }} alt="Nathan's Sphere" priority />
        
         <p style={{ fontSize: 10, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--warm-gray)' }}>
@@ -46,7 +30,7 @@ export default function Hero() {
       </div>
 
       {/* Bottom left content */}
-      <div style={{ position: 'relative', zIndex: 2, maxWidth: 520 }}>
+      <div className="hero-copy">
         <p className="fade-up delay-1" style={{
           fontSize: 10, letterSpacing: '0.22em',
           textTransform: 'uppercase', color: 'var(--accent)', marginBottom: 20,
@@ -54,12 +38,12 @@ export default function Hero() {
           Lagos · London · The World
         </p>
 
-        <h1 className="fade-up delay-2" style=
-        {{
+        <h1 className="fade-up delay-2 hero-headline" style={
+        {
           fontFamily: 'Cormorant, serif',
           fontSize: 'clamp(48px, 6.5vw, 86px)',
           fontWeight: 300, lineHeight: 1.08,
-          color: 'var(--dark)', letterSpacing: '-0.01em',
+          letterSpacing: '-0.01em',
           marginBottom: 32,
         }}>
           Fashion built<br />
@@ -67,7 +51,7 @@ export default function Hero() {
           know their worth.
         </h1>
 
-        <div className="fade-up delay-3" style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
+        <div className="fade-up delay-3 hero-actions" style={{ display: 'flex', alignItems: 'center', gap: 32 }}>
           <a href="#collections" style={{
             display: 'inline-block', padding: '14px 36px',
             background: 'var(--dark)', color: 'var(--white)',
@@ -95,10 +79,7 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div style={{
-        position: 'absolute', bottom: 40, right: 48,
-        display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8,
-      }}>
+      <div className="hero-scroll-indicator">
         <div style={{ width: '0.5px', height: 48, background: 'var(--warm-gray)', opacity: 0.4 }} />
         <p style={{
           fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase',

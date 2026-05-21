@@ -28,15 +28,11 @@ const BRANDS = [
 
 export default function SubBrands() {
   return (
-    <section id="subbrands" style={{
-      background: 'var(--off-white)',
-      padding: '120px 48px',
-      borderTop: '0.5px solid var(--stone)',
-    }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+    <section id="subbrands" className="section-wrapper bg-off-white border-top">
+      <div className="section-container">
 
         {/* Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 72 }}>
+        <div className="section-header" style={{ marginBottom: 72 }}>
           <div>
             <p style={{ fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: 16 }}>
               The Universe
@@ -45,17 +41,17 @@ export default function SubBrands() {
               Our Featured Brands
             </h2>
           </div>
-          <p style={{ fontSize: 13, color: 'var(--warm-gray)', maxWidth: 200, textAlign: 'right', lineHeight: 1.8, fontWeight: 300 }}>
+          <p className="section-header-right" style={{ fontSize: 13, color: 'var(--warm-gray)', lineHeight: 1.8, fontWeight: 300 }}>
             Four worlds.<br />One vision.
           </p>
         </div>
 
         {/* Grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1px', background: 'var(--stone)' }}>
+        <div className="subbrands-grid">
           {BRANDS.map((b) => (
             <div
               key={b.id}
-              style={{ background: 'var(--off-white)', padding: 48, cursor: 'pointer', transition: 'background 0.3s' }}
+              className="subbrand-card"
               onMouseEnter={e => (e.currentTarget.style.background = 'var(--white)')}
               onMouseLeave={e => (e.currentTarget.style.background = 'var(--off-white)')}
             >
@@ -70,11 +66,7 @@ export default function SubBrands() {
               </div>
 
               {/* Image placeholder */}
-              <div style={{
-                width: '100%', aspectRatio: '4/3',
-                background: 'var(--stone)', marginBottom: 32,
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-              }}>
+              <div className="subbrand-image">
                 {/* Replace later with:
                     import Image from 'next/image';
                     <Image src="/images/brand-01.jpg" fill style={{ objectFit: 'cover' }} alt={b.name} />

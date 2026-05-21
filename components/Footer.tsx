@@ -2,15 +2,15 @@
 
 export default function Footer() {
   return (
-    <footer style={{
+    <footer className="section-wrapper" style={{
       background: 'var(--black)',
       padding: '72px 48px 40px',
       borderTop: '0.5px solid rgba(255,255,255,0.06)',
     }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <div className="section-container" style={{ maxWidth: 1200, margin: '0 auto' }}>
 
         {/* Top grid */}
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr', gap: 80, marginBottom: 64 }}>
+        <div className="footer-grid">
 
           {/* Brand */}
           <div>
@@ -61,15 +61,11 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div style={{
-          borderTop: '0.5px solid rgba(255,255,255,0.06)',
-          paddingTop: 32,
-          display: 'flex', justifyContent: 'space-between', alignItems: 'center',
-        }}>
+        <div className="footer-bottom">
           <p style={{ fontSize: 11, color: 'rgba(255,255,255,0.2)', fontWeight: 300 }}>
             © {new Date().getFullYear()} Nathan&apos;s Sphere. All rights reserved.
           </p>
-          <div style={{ display: 'flex', gap: 28 }}>
+          <div style={{ display: 'flex', gap: 28, flexWrap: 'wrap' }}>
             {['Instagram', 'Twitter / X', 'Pinterest'].map(s => (
               <a key={s} href="#" style={{
                 fontSize: 11, color: 'rgba(255,255,255,0.2)',

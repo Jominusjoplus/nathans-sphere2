@@ -23,15 +23,11 @@ const ITEMS = [
 
 export default function Collections() {
   return (
-    <section id="collections" style={{
-      padding: '120px 48px',
-      background: 'var(--white)',
-      borderTop: '0.5px solid var(--stone)',
-    }}>
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+    <section id="collections" className="section-wrapper bg-white border-top">
+      <div className="section-container">
 
         {/* Header */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: 72 }}>
+        <div className="section-header">
           <div>
             <p style={{ fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: 16 }}>
               Archive
@@ -61,26 +57,16 @@ export default function Collections() {
         </div>
 
         {/* List */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5px', background: 'var(--stone)' }}>
+        <div className="collections-list">
           {ITEMS.map((c, i) => (
             <div
               key={i}
-              style={{
-                background: 'var(--white)',
-                display: 'grid', gridTemplateColumns: '260px 1fr 32px',
-                gap: 48, alignItems: 'center', padding: '40px 0',
-                cursor: 'pointer', transition: 'background 0.3s',
-              }}
+              className="collection-item"
               onMouseEnter={e => (e.currentTarget.style.background = 'var(--off-white)')}
               onMouseLeave={e => (e.currentTarget.style.background = 'var(--white)')}
             >
               {/* Image placeholder */}
-              <div style={{
-                width: 260, height: 170,
-                background: 'var(--stone)',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                flexShrink: 0,
-              }}>
+              <div className="collection-image">
                 {/* Replace later with:
                     <Image src="/images/collection-01.jpg" width={260} height={170} style={{ objectFit: 'cover' }} alt={c.name} />
                 */}
@@ -109,7 +95,7 @@ export default function Collections() {
               </div>
 
               {/* Arrow */}
-              <div style={{ fontSize: 20, color: 'var(--stone)' }}>→</div>
+              <div className="collection-arrow">→</div>
             </div>
           ))}
         </div>

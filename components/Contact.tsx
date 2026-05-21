@@ -25,26 +25,9 @@ export default function Contact() {
     }
   };
 
-  const inputStyle = {
-    width: '100%',
-    background: 'transparent',
-    border: 'none',
-    borderBottom: '0.5px solid var(--stone)',
-    padding: '14px 0',
-    fontSize: 14,
-    color: 'var(--dark)',
-    fontFamily: 'DM Sans, sans-serif',
-    fontWeight: 300,
-    outline: 'none',
-  };
-
   return (
-    <section id="contact" style={{
-      padding: '120px 48px',
-      background: 'var(--off-white)',
-      borderTop: '0.5px solid var(--stone)',
-    }}>
-      <div style={{ maxWidth: 800, margin: '0 auto' }}>
+    <section id="contact" className="section-wrapper bg-off-white border-top">
+      <div className="section-container" style={{ maxWidth: 800, margin: '0 auto' }}>
 
         {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: 72 }}>
@@ -73,7 +56,7 @@ export default function Contact() {
           <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: 32 }}>
 
             {/* Name + Email */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 32 }}>
+            <div className="contact-form-grid">
               <div>
                 <label style={{ fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--warm-gray)', display: 'block', marginBottom: 8 }}>
                   Full Name
@@ -81,7 +64,7 @@ export default function Contact() {
                 <input
                   required type="text" value={form.name}
                   onChange={set('name')} placeholder="Your name"
-                  style={inputStyle}
+                  className="contact-input"
                   onFocus={e => (e.target.style.borderBottomColor = 'var(--dark)')}
                   onBlur={e => (e.target.style.borderBottomColor = 'var(--stone)')}
                 />
@@ -93,7 +76,7 @@ export default function Contact() {
                 <input
                   required type="email" value={form.email}
                   onChange={set('email')} placeholder="your@email.com"
-                  style={inputStyle}
+                  className="contact-input"
                   onFocus={e => (e.target.style.borderBottomColor = 'var(--dark)')}
                   onBlur={e => (e.target.style.borderBottomColor = 'var(--stone)')}
                 />
@@ -105,7 +88,7 @@ export default function Contact() {
               <label style={{ fontSize: 9, letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--warm-gray)', display: 'block', marginBottom: 8 }}>
                 Area of Interest
               </label>
-              <select value={form.interest} onChange={set('interest')} style={{ ...inputStyle, cursor: 'pointer' }}>
+              <select value={form.interest} onChange={set('interest')} className="contact-select" style={{ cursor: 'pointer' }}>
                 <option value="general">General Inquiry</option>
                 <option value="bespoke">Bespoke Commission</option>
                 <option value="wholesale">Wholesale Partnership</option>
@@ -123,7 +106,7 @@ export default function Contact() {
               <textarea
                 required rows={5} value={form.message}
                 onChange={set('message')} placeholder="Tell us how we can serve you..."
-                style={{ ...inputStyle, resize: 'none', borderBottom: 'none', border: '0.5px solid var(--stone)', padding: 16 }}
+                className="contact-textarea"
                 onFocus={e => (e.target.style.borderColor = 'var(--dark)')}
                 onBlur={e => (e.target.style.borderColor = 'var(--stone)')}
               />
@@ -140,14 +123,8 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === 'loading'}
-              style={{
-                background: 'var(--dark)', color: 'var(--white)',
-                border: 'none', padding: '18px 48px',
-                fontSize: 10, letterSpacing: '0.22em', textTransform: 'uppercase',
-                cursor: 'pointer', alignSelf: 'flex-start',
-                fontFamily: 'DM Sans, sans-serif', transition: 'background 0.3s',
-                opacity: status === 'loading' ? 0.6 : 1,
-              }}
+              className="contact-submit"
+              style={{ opacity: status === 'loading' ? 0.6 : 1 }}
               onMouseEnter={e => (e.currentTarget.style.background = 'var(--black)')}
               onMouseLeave={e => (e.currentTarget.style.background = 'var(--dark)')}
             >
