@@ -395,4 +395,3 @@ body {
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--white); }
 ::-webkit-scrollbar-thumb { background: var(--stone); }
-body { opacity: 0 !important; }
